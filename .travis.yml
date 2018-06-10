@@ -8,5 +8,5 @@ deploy:
   - provider: script
     script: "scripts/cipublish"
     on:
-      repo: rbreslow/garrysmodds
+      repo: rbreslow/docker-garrysmodds
       branch: master
