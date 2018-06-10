@@ -1,0 +1,12 @@
+language: bash
+services: docker
+
+script:
+  - ./scripts/cibuild
+
+deploy:
+  - provider: script
+    script: "scripts/cipublish"
+    on:
+      repo: rbreslow/garrysmodds
+      branch: master
