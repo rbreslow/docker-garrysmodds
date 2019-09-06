@@ -1,4 +1,4 @@
-# docker-garrysmodds [![Travis (.org) branch](https://img.shields.io/travis/rbreslow/docker-garrysmodds/master)](http://travis-ci.org/rbreslow/docker-garrysmodds) [![quay.io](https://img.shields.io/badge/quay.io-slim-blue)](https://quay.io/repository/rbreslow/steamcmd)
+# docker-garrysmodds [![Travis (.org) branch](https://img.shields.io/travis/rbreslow/docker-garrysmodds/master)](http://travis-ci.org/rbreslow/docker-garrysmodds) [![Docker Repository on Quay](https://quay.io/repository/rbreslow/garrysmodds/status "Docker Repository on Quay")](https://quay.io/repository/rbreslow/garrysmodds)
 
 This repository contains a `Dockerfile` designed to support Garry's Mod Dedicated Server.
 
