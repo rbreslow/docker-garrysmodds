@@ -9,7 +9,7 @@ fi
 
 function usage() {
     echo -n \
-"Usage: $(basename "$0")
+        "Usage: $(basename "$0")
 Build container images from templates.
 "
 }
@@ -20,8 +20,6 @@ if [ "${BASH_SOURCE[0]}" = "${0}" ]; then
     else
         docker \
             build -t "quay.io/rbreslow/garrysmodds:slim" .
-
-        #scripts/test
 
         docker images
     fi
