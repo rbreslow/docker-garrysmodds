@@ -6,7 +6,7 @@ USER root
 
 # Install dependencies for Garry's Mod DS
 RUN set -ex \
-    && apt-get update && apt-get install -y lib32tinfo5 --no-install-recommends \
+    && apt-get update && apt-get install -y libtinfo5:i386 --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 USER steam
