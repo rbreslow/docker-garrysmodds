@@ -26,9 +26,9 @@ EXPOSE 27005/udp
 EXPOSE 26900/udp
 EXPOSE 51840/udp
 
-WORKDIR /var/lib/steam/.steam/SteamApps/common/GarrysModDS/
+WORKDIR /var/lib/steam/.steam/steamapps/common/GarrysModDS/
 
-ENTRYPOINT ["/var/lib/steam/.steam/SteamApps/common/GarrysModDS/srcds_run"]
+ENTRYPOINT ["/var/lib/steam/.steam/steamapps/common/GarrysModDS/srcds_run"]
 CMD ["-game garrysmod", \
     "-maxplayers 16", \
     "+gamemode sandbox", \

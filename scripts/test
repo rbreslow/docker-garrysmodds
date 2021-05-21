@@ -1,0 +1,28 @@
+#!/bin/bash
+
+if [[ -n "${CI}" ]]; then
+    set -x
+fi
+
+set -u
+
+function usage() {
+    echo -n \
+        "Usage: $(basename "$0")
+Test container images.
+"
+}
+
+if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
+    if [[ "${1:-}" == "--help" ]]; then
+        usage
+    else
+        # Determine whether srcds_run is accessible by displaying the usage
+        # message.
+        docker run --rm \
+            quay.io/rbreslow/garrysmodds:slim -help
+
+        # srcds_run always kills itself with a SIGINT.
+        (( $? == 130 ))
+    fi
+fi
