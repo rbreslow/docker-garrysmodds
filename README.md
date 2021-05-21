@@ -1,4 +1,4 @@
-# docker-garrysmodds [![CI](https://github.com/rbreslow/docker-garrysmodds/workflows/CI/badge.svg?branch=master)](https://github.com/rbreslow/docker-garrysmodds/actions?query=workflow%3ACI) [![Docker Repository on Quay](https://quay.io/repository/rbreslow/garrysmodds/status "Docker Repository on Quay")](https://quay.io/repository/rbreslow/garrysmodds)
+# docker-garrysmodds [![CI](https://github.com/rbreslow/docker-garrysmodds/workflows/CI/badge.svg?branch=master)](https://github.com/rbreslow/docker-garrysmodds/actions?query=workflow%3ACI)
 
 This repository contains a `Dockerfile` designed to support Garry's Mod Dedicated Server.
 

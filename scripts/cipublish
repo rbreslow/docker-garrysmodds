@@ -19,5 +19,13 @@ if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
 
         docker \
             push "quay.io/rbreslow/garrysmodds:slim"
+
+        if [[ "${GARRYSMOD_BETA}" == "NONE" ]]; then
+        docker \
+            push "quay.io/rbreslow/garrysmodds:slim"
+        else
+        docker \
+            push "quay.io/rbreslow/garrysmodds:${GARRYSMOD_BETA}-slim"
+        fi
     fi
 fi

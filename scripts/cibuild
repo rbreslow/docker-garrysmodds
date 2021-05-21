@@ -18,8 +18,16 @@ if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
     if [[ "${1:-}" == "--help" ]]; then
         usage
     else
-        docker \
-            build -t "quay.io/rbreslow/garrysmodds:slim" .
+        sed -e "s/%%GARRYSMOD_BETA%%/$GARRYSMOD_BETA/" \
+            Dockerfile.template >Dockerfile
+
+        if [[ "${GARRYSMOD_BETA}" == "NONE" ]]; then
+            docker \
+                build -t "quay.io/rbreslow/garrysmodds:slim" .
+        else
+            docker \
+                build -t "quay.io/rbreslow/garrysmodds:${GARRYSMOD_BETA}-slim" .
+        fi
 
         docker images
     fi
