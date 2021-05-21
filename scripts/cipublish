@@ -1,6 +1,11 @@
 #!/bin/bash
 
 set -e
+
+if [[ -n "${CI}" ]]; then
+    set -x
+fi
+
 set -u
 
 function usage() {

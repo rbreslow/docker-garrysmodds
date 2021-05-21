@@ -1,11 +1,12 @@
 #!/bin/bash
 
 set -e
-set -u
 
 if [[ -n "${CI}" ]]; then
     set -x
 fi
+
+set -u
 
 function usage() {
     echo -n \
@@ -20,6 +21,8 @@ if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
     else
         docker \
             build -t "quay.io/rbreslow/garrysmodds:slim" .
+
+        ./scripts/test
 
         docker images
     fi
